@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1><span>Quizz</span> Culture générale. ✅</h1>
+
+      <form class="form">
+        <!-- Question 1 -->
+        <div class="question">
+          <p>Qui est sacré empereur de France le 2 décembre 1804 ?</p>
+
+          <label for="clovis">Clovis</label>
+          <input type="radio" id="clovis" name="question-1" checked>
+
+          <label for="abraham">Abraham Lincoln</label>
+          <input type="radio" id="abraham" name="question-1">
+
+          <label for="napoleon">Napoleon Bonaparte</label>
+          <input type="radio" id="napoleon" name="question-1">
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+          <p>Quand la déclaration d'indépendance des Etas-Unis a-t-elle été votée ?</p>
+
+          <label for="quatreJuillet">4 juillet 1776</label>
+          <input type="radio" id="quatreJuillet" name="question-2" checked>
+
+          <label for="dixHuitAvril">18 avril 1856</label>
+          <input type="radio" id="dixHuitAvril" name="question-2">
+
+          <label for="trenteJuin">30 juin 1925</label>
+          <input type="radio" id="trenteJuin" name="question-2">
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+          <p>Quand a eu lieu la chute de l'empire romain d'occident ?</p>
+
+          <label for="quinzeAp">15 ap. J.-C.</label>
+          <input type="radio" id="quinzeAp" name="question-3" checked>
+
+          <label for="quatreCentSoixanteSeizeAp">476 ap. J.-C.</label>
+          <input type="radio" id="quatreCentSoixanteSeizeAp" name="question-3">
+
+          <label for="moinSeptCentQuaranteAv">-740 av J.-C.</label>
+          <input type="radio" id="moinSeptCentQuaranteAv" name="question-3">
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+          <p>Quelle est la capitale de la Slovénie ?</p>
+
+          <label for="ljubljana">Ljubljana</label>
+          <input type="radio" id="ljubljana" name="question-4" checked>
+
+          <label for="belgrade">Belgrade</label>
+          <input type="radio" id="belgrade" name="question-4">
+
+          <label for="bratislava">Bratislava</label>
+          <input type="radio" id="bratislava" name="question-4">
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+          <p>Combien d'habitans compte l'Irlande en 2020 ?</p>
+
+          <label for="unMillion">1,365 Million</label>
+          <input type="radio" id="unMillion" name="question-5" checked>
+
+          <label for="vingtEtMillions">21 Millions</label>
+          <input type="radio" id="vingtEtMillions" name="question-5">
+
+          <label for="quatreMillions">4,9 Millions</label>
+          <input type="radio" id="quatreMillions" name="question-5">
+        </div>
+
+      <!-- Submit -->
+        <button>Valider ✔</button>
+      </form>
+
+      <div class="result">
+        <p>Cliquez sur <span>valider</span> pour voir les <span>résultats.</span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
