@@ -1,14 +1,77 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
+*, ::before, ::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  font-family: Open sans, sans-serif;
+  font-family: "Open sans", sans-serif;
   background: linear-gradient(to right, #e0eafc, #cfdef3);
   padding: clamp(20px, 5vw, 50px) 20px 10px;
+  font-size: 15px;
 }
+body .container {
+  justify-content: center;
+}
+body .container h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2em;
+}
+body .container h1 span {
+  font-weight: 800;
+}
+body .container form .question {
+  background: #f1f1f1;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+body .container form .question .answers {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+body .container form .question .question_sentence {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+body .container form .question .radio_input {
+  padding-bottom: 10px;
+}
+body .container form button {
+  margin: 20px auto;
+  display: block;
+  width: 150px;
+  padding: 10px;
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+body .container form button:hover {
+  background: #d5d5d5;
+}
+body .container .result {
+  width: 70%;
+  text-align: center;
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 30px auto;
+  padding: 30px;
+  font-size: 1.2em;
+}
+body .container .result .score {
+  margin: 10px auto;
+}
+body .container .result .score span {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
