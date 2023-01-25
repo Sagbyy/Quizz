@@ -14,19 +14,25 @@ btn.addEventListener('click', handleSubmit);
 
 
 function handleSubmit(e) {
+    // On annule l'envoie du bouton
     e.preventDefault();
-
-
+    
+    // Récuperation des données
     const radioButtons = document.querySelectorAll("input[type='radio']:checked");
 
+    // Pour chaque réponse
     radioButtons.forEach((radioButton, index) => {
+        // Vérifie si la value de la réponse correspond au tableau de responses
         if (radioButton.value === responses[index]) {
+            // Si oui ajout de true dans un nouveau tableau
             resultsUser.push(true);
         } else {
+            // Si non ajout de false dans un nouveau tableau
             resultsUser.push(false);
         }
     });
 
+    // Appel de fonction
     showAnswers()
     displayScore(counterScore());
 
@@ -35,7 +41,7 @@ function handleSubmit(e) {
 
 function counterScore() {
     let counter = 0;
-
+    // Compte le nombre de bonne réponse
     for (let i = 0; i < responses.length; i++) {
         if (resultsUser[i]) counter++;
     }
@@ -43,6 +49,7 @@ function counterScore() {
 }
 
 function showAnswers() {
+    // Pour chaque div de question ajout d'un icone
     for (let i = 0; i < questions.length; i++) {
         if (resultsUser[i]) {
             answers[i].textContent = '✔️';
@@ -58,6 +65,8 @@ function answerSentenceFunction(counter) {
     } else {
         answerSentence.textContent = "Mais naaan t'es bon !";
     }
+
+    score.innerHTML = `Score : <span>${counter} / ${responses.length} </span>`;
 }
 
 const encouragingPhrase = document.querySelector('.encouraging_phrase');
@@ -68,32 +77,26 @@ function displayScore(counter) {
         case 0:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "👎 Ah oui là c'est chaud 👎";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
         case 1:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "😭 Un point c'est déjà sa 😭";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
         case 2:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "👀 Faudrait prendre des cours là 👀";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
         case 3:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "✨ Bon tu as dépasser la moyenne ✨";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
         case 4:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "⭐️ A un doigt de la victoire ⭐️";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
         case 5:
             answerSentenceFunction(counter);
             encouragingPhrase.textContent = "✔️ Félicitation tu as réussit ✔️";
-            score.innerHTML = `Score : <span>${counter} / 5 </span>`;
             break
     }
 }
