@@ -9,6 +9,12 @@
 $shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 $white: #f1f1f1;
 
+// Mixin
+@mixin shadow {
+  background: $white;
+  box-shadow: $shadow;
+}
+
 body {
   min-height: 100vh;
   font-family: 'Open sans', sans-serif;
@@ -17,8 +23,6 @@ body {
   font-size: 15px;
 
   .container {
-    justify-content: center;
-
     // Title
     h1 {
       text-align: center;
@@ -33,12 +37,11 @@ body {
 // Formulaire
     form {
       .question {
-        background: $white;
         padding: 20px;
         margin: 20px auto;
         width: 70%;
         position: relative;
-        box-shadow: $shadow;
+        @include shadow;
 
         .answers {
           position: absolute;
@@ -62,12 +65,11 @@ body {
         display: block;
         width: 150px;
         padding: 10px;
-        background: $white;
-        box-shadow: $shadow;
         border: none;
         transition: background 0.2s ease;
         cursor: pointer;
         font-size: 1.2em;
+        @include shadow;
 
         &:hover {
           background: #d5d5d5;
@@ -79,11 +81,10 @@ body {
     .result {
       width: 70%;
       text-align: center;
-      background: $white;
-      box-shadow: $shadow;
       margin: 30px auto;
       padding: 30px;
       font-size: 1.2em;
+      @include shadow;
 
       .score {
         margin: 10px auto;
@@ -91,6 +92,22 @@ body {
         span {
           font-weight: 700;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  body {
+    font-size: 13px;
+    .container {
+      .form {
+        .question {
+          width: 100%;
+        }
+      }
+      .result {
+        width: 100%;
       }
     }
   }

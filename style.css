@@ -11,9 +11,6 @@ body {
   padding: clamp(20px, 5vw, 50px) 20px 10px;
   font-size: 15px;
 }
-body .container {
-  justify-content: center;
-}
 body .container h1 {
   text-align: center;
   font-weight: 500;
@@ -23,11 +20,11 @@ body .container h1 span {
   font-weight: 800;
 }
 body .container form .question {
-  background: #f1f1f1;
   padding: 20px;
   margin: 20px auto;
   width: 70%;
   position: relative;
+  background: #f1f1f1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 body .container form .question .answers {
@@ -48,12 +45,12 @@ body .container form button {
   display: block;
   width: 150px;
   padding: 10px;
-  background: #f1f1f1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   border: none;
   transition: background 0.2s ease;
   cursor: pointer;
   font-size: 1.2em;
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 body .container form button:hover {
   background: #d5d5d5;
@@ -61,17 +58,29 @@ body .container form button:hover {
 body .container .result {
   width: 70%;
   text-align: center;
-  background: #f1f1f1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin: 30px auto;
   padding: 30px;
   font-size: 1.2em;
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 body .container .result .score {
   margin: 10px auto;
 }
 body .container .result .score span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 740px) {
+  body {
+    font-size: 13px;
+  }
+  body .container .form .question {
+    width: 100%;
+  }
+  body .container .result {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
